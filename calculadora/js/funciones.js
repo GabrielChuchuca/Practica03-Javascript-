@@ -31,7 +31,9 @@ function escribir(n) {
 function raiz() {
     var caja1 = document.f1.txtcaja1.value;
     var caja2 = document.f1.txtcaja2.value;
-    document.f1.txtcaja1.value = "Math.sqrt(" + caja2 + caja1 + ")";
+    var sbrt = "Math.sqrt(" + caja2 + caja1 + ")"
+    var sbrt2 = sbrt.substr(9)
+    document.f1.txtcaja1.value = sbrt2;
     document.f1.txtcaja2.value = "";
 }
 function arit(o) {
@@ -41,22 +43,38 @@ function arit(o) {
     calcular()
     if (unum == "+" || unum == "-" || unum == "*" || unum == "/") {
         unum = unum.replace(unum, o);
+        console.log('1.1if')
         var res = caja1.substring(0, caja1.length - 1);
+        console.log('1.2if')
         document.f1.txtcaja1.value = res + unum;
+        console.log('1.3if')
     }
     if (caja1 == "" && caja2 != "") {
+        console.log('2if')
         document.f1.txtcaja1.value = caja2 + o;
     }
     else {
+        console.log('3if')
         document.f1.txtcaja1.value = caja1 + caja2 + o;
     }
     borrar = true;
 }
+
+function porcentaje() {
+    var caja1 = document.f1.txtcaja1.value;
+    var caja2 = document.f1.txtcaja2.value;
+    var por = eval(caja1 + caja2)
+    document.f1.txtcaja2.value = por/100;
+    document.f1.txtcaja1.value = caja1 + caja2 + "%";
+    borrar = true;
+    blocdel = true;
+} 
+
 function calcular() {
     var caja1 = document.f1.txtcaja1.value;
     var caja2 = document.f1.txtcaja2.value;
     document.f1.txtcaja2.value = eval(caja1 + caja2);
-    document.f1.txtcaja1.value = "";
+    document.f1.txtcaja1.value = caja1 + caja2;
     borrar = true;
     blocdel = true;
 }
@@ -82,7 +100,7 @@ function backSpace() {
   
   } 
   function inversa(){
-      var caja2 = document.f1.txtcaja2.value;
+      var caja2 = Number(document.f1.txtcaja2.value);
       var inv = (1/caja2);
       document.f1.txtcaja1.value = inv;
   } 
