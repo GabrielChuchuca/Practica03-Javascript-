@@ -54,26 +54,25 @@ function iniciar() {
 function siguiente() {
     num++
     //console.log(num)
-    direccion = "images/foto" + participantes[num] + ".jpg";
-    console.log(direccion);
-    document.getElementById("foto").src = direccion;
-
     if (num == 4) {
-        document.getElementById("siguiente").disabled = true;
-        document.getElementById("anterior").disabled = false;
+        document.getElementById("next").disabled = true;
+        document.getElementById("previous").disabled = false;
 
     }
 
     else if (num == 0) {
-        document.getElementById("anterior").disabled = true;
-        document.getElementById("siguiente").disabled = false;
+        document.getElementById("previous").disabled = true;
+        document.getElementById("nexte").disabled = false;
 
     } else {
-        document.getElementById("siguiente").disabled = false;
-        document.getElementById("anterior").disabled = false;
+        document.getElementById("next").disabled = false;
+        document.getElementById("previous").disabled = false;
 
 
     }
+    direccion = "images/foto" + participantes[num] + ".jpg";
+    console.log(direccion);
+    document.getElementById("foto").src = direccion;
 
 
 
