@@ -1,7 +1,7 @@
-
-
+var direccion
+var par2
 var num = 0
-var participantes = ['images/foto0.jpg', 'images/foto1.jpg', 'images/foto2.jpg', 'images/foto3.jpg', 'images/foto4.jpg', 'images/foto5.jpg', 'images/foto6.jpg', 'images/foto7.jpg', 'images/foto8.jpg', 'images/foto9.jpg'];
+var participantes = ['images/foto1.jpg', 'images/foto2.jpg', 'images/foto3.jpg', 'images/foto4.jpg', 'images/foto5.jpg', 'images/foto6.jpg', 'images/foto7.jpg', 'images/foto8.jpg', 'images/foto9.jpg', 'images/foto10.jpg'];
 //var num = 1
 
 /*function hola() {
@@ -22,10 +22,11 @@ function hola() {
         //participantes[i] = Math.floor(Math.random() * (10))
     }
     console.log(participantes)
-    var par2 = participantes.slice(0, 5)
+    par2 = participantes.slice(0, 5)
+    console.log(par2)
     console.log(num)
 
-    var direccion = "images/foto" + par2[num] + ".jpg";
+    direccion = "images/foto" + par2[num] + ".jpg";
     console.log(direccion);
     document.getElementById("foto").src = direccion;
 
@@ -38,19 +39,11 @@ function hola() {
     var val = document.getElementById("boton").value = 'Parar';
 }
 
+
+
 function iniciar() {
 
-    if (document.getElementById('boton').value == 'Iniciar') {
-        hola()
-        //a = setInterval(hola, 2000)
-        alert('bien')
-        //bandera=false
-    } else if (document.getElementById('boton').value == 'Parar') {
-        clearInterval(a)
-        alert('mal')
-        var val = document.getElementById("boton").value = 'Iniciar';
-
-    }
+    hola()
 }
 
 
@@ -65,7 +58,7 @@ function siguiente() {
 
     else if (num == 0) {
         document.getElementById("previous").disabled = true;
-        document.getElementById("nexte").disabled = false;
+        document.getElementById("next").disabled = false;
 
     } else {
         document.getElementById("next").disabled = false;
@@ -73,7 +66,7 @@ function siguiente() {
 
 
     }
-    direccion = "images/foto" + participantes[num] + ".jpg";
+    direccion = "images/foto" + par2[num] + ".jpg";
     console.log(direccion);
     document.getElementById("foto").src = direccion;
 
@@ -106,6 +99,7 @@ function siguiente() {
 
 }
 
+
 function anterior() {
     num--
     //console.log(num)
@@ -125,7 +119,7 @@ function anterior() {
 
 
     }
-    direccion = "images/foto" + participantes[num] + ".jpg";
+    direccion = "images/foto" + par2[num] + ".jpg";
     console.log(direccion);
     document.getElementById("foto").src = direccion;
 
