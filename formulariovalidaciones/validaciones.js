@@ -131,11 +131,9 @@ function validarCorreo(correo){
 	//Creamos un objeto 
 	object=document.getElementById('correo');
 	valueForm=object.value;
- 
 	// Patron para el correo
     var patron="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[ups]+([.][edu]+)*[.][ec]{1,5}";
     var patron2="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[est]+([.][ups]+)*([.][edu]+)*[.][ec]{1,5}";
-
 	if(valueForm.search(patron)==0)
 	{
 		//Mail correcto
@@ -148,8 +146,5 @@ function validarCorreo(correo){
     }else{
         //Mail incorrecto
     document.getElementById('mensajeCorreo').innerHTML = ('Correo Invalido');
-
-
     }
-	
 }
