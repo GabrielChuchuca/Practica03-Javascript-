@@ -35,7 +35,7 @@ function validarCamposObligatorios() {
 }
 
 function validarcedula() {
-    var cad = document.getElementById('cedula').value.trim();
+    var cad = document.getElementById("cedula").value.trim();
     var total = 0;
     var longitud = cad.length;
     var longcheck = longitud - 1;
@@ -54,9 +54,9 @@ function validarcedula() {
         total = total % 10 ? 10 - total % 10 : 0;
 
         if (cad.charAt(longitud - 1) == total) {
-            document.getElementById('mensajeCedula').innerHTML = ("Cedula Válida");
+            document.getElementById("mensajeCedula").innerHTML = ("Cedula Válida");
         } else {
-            document.getElementById('mensajeCedula').innerHTML = ("Cedula Inválida");
+            document.getElementById("mensajeCedula").innerHTML = ("Cedula Inválida");
         }
     }
 }

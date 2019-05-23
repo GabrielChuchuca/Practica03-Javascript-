@@ -12,9 +12,9 @@
     </header>
     
 <section>
-        <form align="left" action="validacionescumplidas.php" method="POST" onsubmit="return validarCamposObligatorios()">
-            <label id="cedula">Cedula (*):</label>
-            <input type="text" id="cedula" name="cedula" placeholder="Ingrese su numero de cedula ..." onblur="validarcedula(this);" maxlength="10"/>
+        <form align="center" action="validacionescumplidas.php" method="POST" onsubmit="return validarCamposObligatorios()">
+            <label id="ced">Cedula (*):</label>
+            <input type="text" id="cedula" name="cedula" placeholder="Ingrese su numero de cedula ..." onblur="validarcedula(this)" onkeypress="return soloNumeros(event);" maxlength="10" />
             <span id="mensajeCedula"></span><br><br>
             
             <label for="nombres">Nombre (*):</label>
