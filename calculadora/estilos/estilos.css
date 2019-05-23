@@ -1,19 +1,17 @@
 .input{
     font-size: 18px;
-		font-weight:lighter;
-		font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
-        width:31px;border:1px;
-        border-color: black;
-		height: 31px;
-		
-background-color: white;
-color:black;
-        margin-bottom: 5px;
-        background: transparent
-}
-
+    font-weight:lighter;
+    font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+    width:31px;border:1px;
+    border-color: black;
+    height: 31px;
+    background-color: white;
+    color:black;
+    margin-bottom: 5px;
+    background: transparent
+    }
+    
 .input:hover{
     background-color: #008CBA;
-color:white
-
-}
+    color:white
+    }

@@ -29,7 +29,7 @@ function validarCamposObligatorios() {
         }
     }
     if (!bandera) {
-        alert('Ahora si llena bn oe ')
+        alert('LLene todo porfavor ')
     }
     return bandera
 }
@@ -47,16 +47,16 @@ function validarcedula() {
                 if (aux > 9) aux -= 9;
                 total += aux;
             } else {
-                total += parseInt(cad.charAt(i)); // parseInt o concatenará en lugar de sumar
+                total += parseInt(cad.charAt(i)); 
             }
         }
 
         total = total % 10 ? 10 - total % 10 : 0;
 
         if (cad.charAt(longitud - 1) == total) {
-            document.getElementById("mensajeCedula").innerHTML = ("Cedula Válida");
+            document.getElementById("mensajeCedula").innerHTML = ("Cedula Valida");
         } else {
-            document.getElementById("mensajeCedula").innerHTML = ("Cedula Inválida");
+            document.getElementById("mensajeCedula").innerHTML = ("Cedula Invalida");
         }
     }
 }

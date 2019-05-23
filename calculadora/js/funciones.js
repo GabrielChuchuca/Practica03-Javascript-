@@ -89,15 +89,10 @@ function masmenos() {
     }
 }
 function backSpace() {
-  
     var caja2 = document.f1.txtcaja2.value;
-    
     var len = caja2.length - 1;
-    
     var newNumber = caja2.substring( 0, len );
-    
     document.f1.txtcaja2.value = newNumber;
-  
   } 
   function inversa(){
       var caja2 = Number(document.f1.txtcaja2.value);
